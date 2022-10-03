@@ -4,8 +4,10 @@ import HomeTemplate from '../components/templates/HomeTemplate'
 
 const Home = () => {
 	return (
-		<HomeTemplate>
-			<h1>Home</h1>
+		<HomeTemplate page="home">
+			<div className="container">
+				<h1>Home</h1>
+			</div>
 		</HomeTemplate>
 	)
 }

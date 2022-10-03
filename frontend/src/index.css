@@ -1,12 +1,14 @@
-*,
-*::before,
-*::after {
-	padding: 0;
-	margin: 0;
-
-	box-sizing: border-box;
+.pointer {
+	cursor: pointer;
 }
 
-body {
-	font-family: sans-serif;
+.sidebar svg,
+.navbar svg {
+	width: 18px;
+}
+
+form.login,
+form.register {
+	margin: 0 auto;
+	max-width: 350px;
 }

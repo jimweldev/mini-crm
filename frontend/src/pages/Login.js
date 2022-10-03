@@ -17,27 +17,51 @@ const Login = () => {
 	}
 
 	return (
-		<HomeTemplate>
-			<form onSubmit={handleLogin}>
-				{error && error}
-				<input
-					placeholder="email"
-					value={email}
-					onChange={(e) => {
-						setEmail(e.target.value)
-					}}
-				/>
-				<input
-					placeholder="password"
-					value={password}
-					onChange={(e) => {
-						setPassword(e.target.value)
-					}}
-				/>
-				<button type="submit" disabled={isLoading}>
-					Submit
-				</button>
-			</form>
+		<HomeTemplate page="login">
+			<div className="container">
+				<form className="login card" onSubmit={handleLogin}>
+					<div className="card-body">
+						<h3 className="mb-3">Login</h3>
+
+						{error && <div class="alert alert-danger">{error}</div>}
+
+						<div className="mb-3">
+							<label>Email Address</label>
+							<input
+								className="form-control"
+								type="text"
+								placeholder="email"
+								value={email}
+								onChange={(e) => {
+									setEmail(e.target.value)
+								}}
+							/>
+						</div>
+						<div className="mb-3">
+							<label>Password</label>
+							<input
+								className="form-control"
+								type="password"
+								placeholder="password"
+								value={password}
+								onChange={(e) => {
+									setPassword(e.target.value)
+								}}
+							/>
+						</div>
+
+						<div className="text-center">
+							<button
+								className="btn btn-dark"
+								type="submit"
+								disabled={isLoading}
+							>
+								Submit
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
 		</HomeTemplate>
 	)
 }

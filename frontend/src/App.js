@@ -1,6 +1,10 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
 
+import 'bootstrap/dist/css/bootstrap.min.css'
+import '@adminkit/core/dist/css/app.css'
+import 'bootstrap/dist/js/bootstrap.min.js'
+
 // HOOKS
 import { useAuthContext } from './hooks/useAuthContext'
 
