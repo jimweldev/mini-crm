@@ -23,7 +23,7 @@ const Login = () => {
 					<div className="card-body">
 						<h3 className="mb-3">Login</h3>
 
-						{error && <div class="alert alert-danger">{error}</div>}
+						{error && <div className="alert alert-danger">{error}</div>}
 
 						<div className="mb-3">
 							<label>Email Address</label>
