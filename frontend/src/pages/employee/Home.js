@@ -1,10 +1,10 @@
 import React from 'react'
 
-import UserTemplate from '../../components/templates/UserTemplate'
+import EmployeeTemplate from '../../components/templates/EmployeeTemplate'
 
 const Home = () => {
 	return (
-		<UserTemplate page="dashboard">
+		<EmployeeTemplate page="dashboard">
 			<h1 className="h3 mb-3">Dashboard</h1>
 
 			<div className="card">
@@ -40,7 +40,7 @@ const Home = () => {
 					</div>
 				</div>
 			</div>
-		</UserTemplate>
+		</EmployeeTemplate>
 	)
 }
 

@@ -34,7 +34,7 @@ const loginUser = async (req, res) => {
 	// generate access token
 	const accessToken = generateAccessToken(user._id)
 
-	res.status(200).json({ email, accessToken })
+	res.status(200).json({ role: user.role, email, accessToken })
 }
 
 // Register user

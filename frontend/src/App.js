@@ -10,7 +10,8 @@ import { useAuthContext } from './hooks/useAuthContext'
 
 // ROUTES
 import HomeRoutes from './components/routes/HomeRoutes'
-import UserRoutes from './components/routes/UserRoutes'
+import AdminRoutes from './components/routes/AdminRoutes'
+import EmployeeRoutes from './components/routes/EmplyeeRoutes'
 
 // PAGES
 // => HOME
@@ -18,8 +19,11 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 
-// => USER
-import UserHome from './pages/user/Home'
+// => ADMIN
+import AdminEmployees from './pages/admin/Employees'
+
+// => EMPLOYEE
+import EmployeeHome from './pages/employee/Home'
 
 const App = () => {
 	const { auth } = useAuthContext()
@@ -33,9 +37,14 @@ const App = () => {
 				<Route path="/register" element={<Register />} />
 			</Route>
 
-			{/* USER ROUTES  */}
-			<Route element={<UserRoutes auth={auth} />}>
-				<Route path="/user" element={<UserHome />} />
+			{/* ADMIN ROUTES  */}
+			<Route element={<AdminRoutes auth={auth} />}>
+				<Route path="/admin" element={<AdminEmployees />} />
+			</Route>
+
+			{/* EMPLOYEE ROUTES  */}
+			<Route element={<EmployeeRoutes auth={auth} />}>
+				<Route path="/employee" element={<EmployeeHome />} />
 			</Route>
 		</Routes>
 	)

@@ -5,7 +5,7 @@ import { useAuthContext } from '../../hooks/useAuthContext'
 import { useLogout } from '../../hooks/useLogout'
 
 import {
-	Sliders,
+	Users,
 	MessageSquare,
 	Bell,
 	User,
@@ -15,7 +15,7 @@ import {
 
 import image from '@adminkit/core/dist/img/avatars/avatar.jpg'
 
-const UserTemplate = ({ page, children }) => {
+const AdminTemplate = ({ page, children }) => {
 	const { auth } = useAuthContext()
 	const { logout } = useLogout()
 
@@ -28,14 +28,14 @@ const UserTemplate = ({ page, children }) => {
 				className={`sidebar js-sidebar ${isSidebarCollapsed && 'collapsed'}`}
 			>
 				<div className="sidebar-content js-simplebar">
-					<Link className="sidebar-brand" to="/user">
-						<span className="align-middle">AdminKit</span>
+					<Link className="sidebar-brand" to="/admin">
+						<span className="align-middle">Mini CRM</span>
 					</Link>
 					<ul className="sidebar-nav">
-						<li className={`sidebar-item ${page === 'dashboard' && 'active'}`}>
-							<Link className="sidebar-link" to="/user">
-								<Sliders className="align-middle" />
-								<span className="align-middle">Dashboard</span>
+						<li className={`sidebar-item ${page === 'employees' && 'active'}`}>
+							<Link className="sidebar-link" to="/admin">
+								<Users className="align-middle" />
+								<span className="align-middle">Employees</span>
 							</Link>
 						</li>
 					</ul>
@@ -179,4 +179,4 @@ const UserTemplate = ({ page, children }) => {
 	)
 }
 
-export default UserTemplate
+export default AdminTemplate
