@@ -153,9 +153,9 @@ const AdminTemplate = ({ page, children }) => {
 									<img
 										src={image}
 										className="avatar img-fluid rounded me-2"
-										alt={auth.email}
+										alt={auth.name}
 									/>
-									<span className="text-dark me-1">{auth.email}</span>
+									<span className="text-dark me-1">{auth.name}</span>
 								</div>
 								<div className="dropdown-menu dropdown-menu-end">
 									<Link className="dropdown-item" to="/profile">
